@@ -2,7 +2,7 @@
 Simple library to hook swift classes.
 
 # About
-As a tweak developer sometimes when you're working on an iOS application that starts to convert classes (or built) in Swift and you need to read or write changes in this class but you don't know to work in Swift or you just want small changes and you don't want use a bigger library like (Reflex and Echo), this library is for you, it's lightweight and simple to use.
+As a tweak developer sometimes when you're working on an iOS application that maybe in Swift or starts to convert classes to Swift, and this situation you need to read or write changes in this class but you don't know to work in Swift or you just want small changes and you don't want use a bigger library like (Reflex and Echo), this library is for you, it's lightweight and simple to use.
 
 # How to setup
 ## Requierments
