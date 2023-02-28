@@ -4,6 +4,34 @@ Simple library to hook swift classes.
 # About
 As a tweak developer sometimes when you're working on an iOS application that maybe in Swift or starts to convert classes to Swift, and in this situation you need to read or write changes in this class but you don't know to work in Swift or you just want small changes and you don't want use a bigger library like (Reflex and Echo), this library is for you, it's lightweight and simple to use.
 
+# How to use
+First you must import the [auto-generated swiftmodule header](https://developer.apple.com/documentation/swift/importing-swift-into-objective-c) by adding ```#import <[PROJECT_NAME]-Swift.h>``` to your Objective-C file. This header will have an conversion of ```BHHook.swift``` as Objective-C interface.
+
+**For more detailed usage please see the example porjects.**
+
+## Change value in class
+```Objective-C
+// Create an instance of the BHHook class, passing in the object to hook and its class
+BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInstance classForCoder]];
+
+// Set the value of a property
+[hookEngine hookWithProperty:@"Username" value:@"BandarHL [hooked]"];
+```
+## Get value for class
+```Objective-C
+// Create an instance of the BHHook class, passing in the object to hook and its class
+BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInstance classForCoder]];
+
+// Get the value of a property
+id propertyValue = [myHook getValueWithProperty:@"propertyName"];
+```
+## Get all Properties in class
+```Objective-C
+// Get the list of properties for a given class
+NSArray *properties = [BHHook getPropertiesOf:[MyClass classForCoder]];
+NSLog(@"%@", properties);
+```
+
 # How to setup
 ## Requierments
 - [Runtime](https://github.com/wickwirew/Runtime)
