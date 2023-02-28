@@ -23,7 +23,7 @@ BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInsta
 BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInstance classForCoder]];
 
 // Get the value of a property
-id propertyValue = [myHook getValueWithProperty:@"propertyName"];
+id propertyValue = [hookEngine getValueWithProperty:@"propertyName"];
 ```
 ## Get all Properties in class
 ```Objective-C
