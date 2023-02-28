@@ -7,8 +7,6 @@ As a tweak developer sometimes when you're working on an iOS application that ma
 # How to use
 First you must import the [auto-generated swiftmodule header](https://developer.apple.com/documentation/swift/importing-swift-into-objective-c) by adding ```#import <[PROJECT_NAME]-Swift.h>``` to your Objective-C file. This header will have an conversion of ```BHHook.swift``` as Objective-C interface.
 
-**For more detailed usage please see the example porjects.**
-
 ## Change value in class
 ```Objective-C
 // Create an instance of the BHHook class, passing in the object to hook and its class
@@ -17,7 +15,7 @@ BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInsta
 // Set the value of a property
 [hookEngine hookWithProperty:@"Username" value:@"BandarHL [hooked]"];
 ```
-## Get value for class
+## Get value from class
 ```Objective-C
 // Create an instance of the BHHook class, passing in the object to hook and its class
 BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInstance classForCoder]];
@@ -25,12 +23,18 @@ BHHook *hookEngine = [[BHHook alloc] initWithInstance:myInstance _class:[myInsta
 // Get the value of a property
 id propertyValue = [hookEngine getValueWithProperty:@"propertyName"];
 ```
-## Get all Properties in class
+## Get all Properties of class
 ```Objective-C
 // Get the list of properties for a given class
 NSArray *properties = [BHHook getPropertiesOf:[MyClass classForCoder]];
 NSLog(@"%@", properties);
 ```
+
+## More?
+**For more detailed usage please see the example porjects. It contain an Example app and Example tweak with both Theos and MonkeyDev.**
+
+<img src="https://user-images.githubusercontent.com/31299470/221991855-16efec45-f1f8-4d6b-aa17-487f84cd6330.gif" alt="1" width="280"/>
+
 
 # How to setup
 ## Requierments
