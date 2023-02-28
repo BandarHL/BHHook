@@ -2,7 +2,7 @@
 Simple library to hook swift classes.
 
 # About
-As a tweak developer sometimes when you're working on an iOS application that maybe in Swift or starts to convert classes to Swift, and in this situation you need to read or write changes in this class but you don't know to work in Swift or you just want small changes and you don't want use a bigger library like (Reflex and Echo), this library is for you, it's lightweight and simple to use.
+As a tweak developer sometimes when you're working on an iOS application that maybe in Swift or starts to convert classes to Swift, and in this situation you need to read or write changes in this class but you don't know to work in Swift or you just want small changes and you don't want use a bigger library like (Reflex and Echo), in this case the library is for you, it's lightweight and simple to use.
 
 # How to use
 First you must import the [auto-generated swiftmodule header](https://developer.apple.com/documentation/swift/importing-swift-into-objective-c) by adding ```#import <[PROJECT_NAME]-Swift.h>``` to your Objective-C file. This header will have an conversion of ```BHHook.swift``` as Objective-C interface.
