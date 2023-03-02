@@ -51,13 +51,10 @@ public class BHHook: NSObject {
     /// - Returns: The value of the property.
     @objc public func getValue(property: String) -> AnyObject {
         if let hookedInstance = self.hookedInstance, let hookedClass = self.hookedClass {
-            let rawPointer = bridgeRetained(obj: hookedInstance)
-            let objInstnace = bridgeTransfer(ptr: rawPointer) as AnyObject
-            
             do {
                 let classInfo = try typeInfo(of: hookedClass)
                 let _property = try classInfo.property(named: property)
-                return try _property.get(from: objInstnace)
+                return try _property.get(from: hookedInstance)
             } catch {
                 fatalError(error.localizedDescription)
             }
